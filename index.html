@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Michelle Layvant is a PhD candidate in Agricultural and Resource Economics at the University of California, Berkeley."
+  >
 
   <title>Michelle Layvant</title>
 
@@ -48,7 +58,7 @@
     }
 
     header {
-      padding: 32px 0;
+      padding: 30px 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -78,11 +88,8 @@
     }
 
     .intro {
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      align-items: center;
-      gap: 70px;
-      padding: 85px 0 70px;
+      max-width: 760px;
+      padding: 80px 0 70px;
     }
 
     h1,
@@ -98,33 +105,6 @@
       font-size: clamp(48px, 7vw, 74px);
     }
 
-    .position {
-      margin: 0 0 28px;
-      color: var(--muted);
-      font-size: 20px;
-    }
-
-    .intro-text {
-      max-width: 660px;
-    }
-
-    .photo-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 280px;
-      height: 340px;
-      background: #eeeeee;
-      color: #777777;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 42px;
-    }
-
-    section {
-      padding: 55px 0;
-      border-top: 1px solid var(--border);
-    }
-
     h2 {
       margin: 0 0 38px;
       font-size: 36px;
@@ -135,22 +115,86 @@
       font-size: 23px;
     }
 
+    .position {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    section {
+      padding: 55px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .research-category {
+      margin: 50px 0 28px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      font-size: 26px;
+    }
+
+    .research-category:first-of-type {
+      margin-top: 0;
+    }
+
     .paper {
-      margin-bottom: 42px;
+      margin-bottom: 48px;
     }
 
     .paper:last-child {
       margin-bottom: 0;
     }
 
-    .paper p {
-      margin: 6px 0;
+    .paper-title {
+      margin-bottom: 8px;
     }
 
-    .coauthors,
+    .paper p {
+      margin: 7px 0;
+    }
+
+    .coauthors {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
     .paper-status {
       color: var(--muted);
       font-size: 16px;
+    }
+
+    .paper-links {
+      display: flex;
+      gap: 10px;
+      margin: 11px 0;
+      font-size: 16px;
+    }
+
+    .abstract {
+      margin-top: 14px;
+    }
+
+    .abstract summary {
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .abstract summary:hover {
+      text-decoration: underline;
+    }
+
+    .abstract > p,
+    .structured-abstract {
+      max-width: 880px;
+      margin-top: 15px;
+    }
+
+    .structured-abstract p {
+      margin: 14px 0;
     }
 
     footer {
@@ -168,14 +212,7 @@
       }
 
       .intro {
-        grid-template-columns: 1fr;
-        gap: 40px;
         padding-top: 55px;
-      }
-
-      .photo-placeholder {
-        width: 220px;
-        height: 270px;
       }
 
       h1 {
@@ -186,21 +223,29 @@
 </head>
 
 <body>
+
   <header>
     <div class="container navigation">
-      <a class="site-name" href="#">Michelle Layvant</a>
 
-      <nav>
+      <a class="site-name" href="#top">
+        Michelle Layvant
+      </a>
+
+      <nav aria-label="Main navigation">
         <a href="#research">Research</a>
         <a href="#teaching">Teaching</a>
-        <a href="cv.pdf">CV</a>
+        <a href="cv.pdf" target="_blank">CV</a>
       </nav>
+
     </div>
   </header>
 
-  <main>
-    <div class="container intro">
-      <div class="intro-text">
+  <main id="top">
+
+    <div class="container">
+
+      <div class="intro">
+
         <h1>Michelle Layvant</h1>
 
         <p class="position">
@@ -209,14 +254,14 @@
         </p>
 
         <p>
-          I am a development economist studying human capital investment
-          and household financial decisions.
+          I am a development economist studying human capital
+          investment and household financial decisions.
         </p>
 
         <p>
-          My research examines how households finance investments in
-          education and health, and the short- and long-run consequences
-          of those investments.
+          My research examines how households finance investments
+          in education and health, and the short- and long-run
+          consequences of those investments.
         </p>
 
         <p>
@@ -225,55 +270,303 @@
             mlayvant@berkeley.edu
           </a>
         </p>
+
       </div>
 
-      <div class="photo-placeholder">
-        ML
-      </div>
     </div>
 
     <section id="research">
+
       <div class="container">
+
         <h2>Research</h2>
 
-        <div class="paper">
-          <h3>
-            School Vouchers as Commitment: Experimental Evidence on
-            School Fees in Uganda
+        <h3 class="research-category">
+          Job Market Paper
+        </h3>
+
+        <article class="paper">
+
+          <h3 class="paper-title">
+            School Vouchers as Commitment: Experimental Evidence
+            on School Fees in Uganda
           </h3>
 
           <p class="coauthors">
             With Gonzalo Ferres
           </p>
 
+        </article>
+
+        <h3 class="research-category">
+          Publications and Accepted Papers
+        </h3>
+
+        <article class="paper">
+
+          <h3 class="paper-title">
+            Intergenerational Child Mortality Impacts of Deworming:
+            Experimental Evidence from Two Decades of the Kenya Life
+            Panel Survey
+          </h3>
+
+          <p class="coauthors">
+            Walker, M. W., Huang, A. H., Asman, S., Baird, S. J.,
+            Fernald, L., Hamory Hicks, J., Hoces de la Guardia, F.,
+            Koiso, S., Kremer, M., Krupoff, M. N.,
+            <strong>Layvant, M.</strong>, Ochieng, E., Suri, P.,
+            &amp; Miguel, E.
+          </p>
+
           <p class="paper-status">
-            Job Market Paper
+            <em>American Economic Journal: Applied Economics</em>,
+            conditionally accepted, 2026.
           </p>
 
-          <p>
-            Paper and abstract forthcoming.
+          <p class="paper-links">
+            <a
+              href="https://www.nber.org/papers/w31162"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NBER Working Paper
+            </a>
           </p>
-        </div>
 
-        <div class="paper">
-          <h3>Other Research</h3>
+          <details class="abstract">
 
-          <p>
-            Additional working papers and projects will be added here.
+            <summary>Abstract</summary>
+
+            <p>
+              We assess impacts of a randomized deworming intervention
+              in Kenya on the mortality of recipients' children using
+              23-year longitudinal data on over 5,500 original
+              participants and their offspring. The under-5 mortality
+              rate fell by 22% (17 deaths per 1000 live births) for
+              children of treatment group individuals, with larger
+              effects when considering the in-utero period due to
+              reduced miscarriage. A combination of improved health,
+              education, living standards and use of health care,
+              increased urban residence, and delayed fertility in the
+              parent generation contributed to the reduction. The
+              results provide evidence for meaningful intergenerational
+              benefits of child health investments.
+            </p>
+
+          </details>
+
+        </article>
+
+        <article class="paper">
+
+          <h3 class="paper-title">
+            Impacts of Contemporaneous Air Pollution Exposure on
+            Cognitive Performance in Kenya
+          </h3>
+
+          <p class="coauthors">
+            Ma, X., <strong>Layvant, M.</strong>, Miguel, E.,
+            Ochieng, E., Pillarisetti, A., &amp; Walker, M. W.
           </p>
-        </div>
+
+          <p class="paper-status">
+            <em>Journal of Health Economics</em> 109, 103166, 2026.
+          </p>
+
+          <p class="paper-links">
+            <a
+              href="https://doi.org/10.1016/j.jhealeco.2026.103166"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Published Article
+            </a>
+          </p>
+
+          <details class="abstract">
+
+            <summary>Abstract</summary>
+
+            <p>
+              We estimate the short-term cognitive effects of fine
+              particulate matter (PM<sub>2.5</sub>) exposure using
+              novel exposure data collected during cognitive testing
+              in Kenya. Unlike most existing studies that rely on
+              satellite-based or fixed monitoring station data, we
+              measure highly localized ambient pollution using portable
+              monitors deployed at cognitive testing sites and link
+              these readings directly to Harmonized Cognitive Assessment
+              Protocol (HCAP) scores. Higher PM<sub>2.5</sub> exposure
+              during testing is associated with lower cognitive
+              performance, particularly in executive function, memory,
+              and visuospatial tasks. Binned exposure models suggest a
+              monotonic pattern, with more negative estimates at higher
+              exposure levels. Notably, effects are significantly larger
+              among more educated individuals, possibly due to greater
+              task demands or lower chronic exposure that limits
+              physiological adaptation. Given that cognitive impairment
+              is evident even at PM<sub>2.5</sub> levels below Kenya’s
+              mean annual regulatory threshold of
+              35 &mu;g/m<sup>3</sup>, the findings suggest that
+              short-term exposure may impose underappreciated human
+              capital costs that current regulatory standards fail to
+              mitigate. The results highlight the potential cognitive
+              and economic returns to interventions that reduce air
+              pollution exposures in low-resource settings.
+            </p>
+
+          </details>
+
+        </article>
+
+        <article class="paper">
+
+          <h3 class="paper-title">
+            Midlife Cognitive Testing in Africa: Validity of the
+            Harmonised Cognitive Assessment Protocol in the Kenya
+            Life Panel Survey
+          </h3>
+
+          <p class="coauthors">
+            Gross, A. L., Duhon, M., Ochieng, E., Ikanga, J. N.,
+            Dow, W. H., Lee, J., Walker, M. W.,
+            <strong>Layvant, M.</strong>, Ngugi, A., Ehrlich, J. R.,
+            &amp; Miguel, E. A.
+          </p>
+
+          <p class="paper-status">
+            <em>BMJ Open</em> 15(8), 2025.
+          </p>
+
+          <p class="paper-links">
+            <a
+              href="https://bmjopen.bmj.com/content/15/8/e096619"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Published Article
+            </a>
+          </p>
+
+          <details class="abstract">
+
+            <summary>Abstract</summary>
+
+            <div class="structured-abstract">
+
+              <p>
+                <strong>Objectives:</strong>
+                Cohort studies of ageing and cognitive decline typically
+                do not begin fielding comprehensive cognitive assessments
+                until older adulthood. However, for identifying
+                preventable dementia risk factors, there is strong value
+                in beginning at earlier ages. The case is especially
+                compelling in sub-Saharan Africa, where the number of
+                older individuals is expected to triple in the next three
+                decades, and where risk factors may operate more
+                intensively at earlier ages. This study reports on the
+                adaptation and validity of the Harmonised Cognitive
+                Assessment Protocol (HCAP) approach in the Kenya Life
+                Panel Survey (KLPS), collected among middle-aged
+                respondents.
+              </p>
+
+              <p>
+                <strong>Design:</strong>
+                To evaluate the validity of the HCAP approach in Kenya,
+                this study assesses model fit statistics from confirmatory
+                factor analyses (CFA) and tests measurement invariance by
+                respondent characteristics.
+              </p>
+
+              <p>
+                <strong>Setting:</strong>
+                Both rural and urban areas in Kenya.
+              </p>
+
+              <p>
+                <strong>Participants:</strong>
+                A sample of n=5878 individuals from the KLPS, who have
+                been surveyed regularly since they were schoolchildren
+                in the 1990s. The HCAP assessment was administered in
+                2023 at an average age of 37 years (10–90 range 34 to 41).
+              </p>
+
+              <p>
+                <strong>
+                  Primary and secondary outcome measures:
+                </strong>
+                For each individual, the CFA generates a general
+                cognitive performance score, and cognitive performance
+                scores for five distinct domains, including memory,
+                executive functioning, language, orientation to time and
+                place, and visuospatial functioning.
+              </p>
+
+              <p>
+                <strong>Results:</strong>
+                Fit of the models to the data was adequate for general
+                cognitive performance (root mean squared error of
+                approximation (RMSEA)=0.03; comparative fit index
+                (CFI)=0.94; standardised root mean residual
+                (SRMR)=0.05), language (RMSEA=0.02; CFI=0.95;
+                SRMR=0.05) and good for memory (RMSEA=0.05; CFI=0.99;
+                SRMR=0.02) and executive functioning (RMSEA=0.03;
+                CFI=0.98; SRMR=0.03). The CFA indicate that the factor
+                structure is consistent with findings from other
+                countries and that reliability for the general cognitive
+                performance score was high. Statistical models also
+                suggest invariance at the scalar level for leading
+                demographic (gender, age) and socioeconomic (education,
+                occupational complexity) characteristics.
+              </p>
+
+              <p>
+                <strong>Conclusions:</strong>
+                This study demonstrates that the cognitive functioning
+                of mid-age Kenyans appears to be well captured by the
+                adapted protocol. While there is a moderate decline in
+                cognitive performance among older individuals, this
+                relationship appears to be mediated by education,
+                indicating that this KLPS HCAP provides a valuable
+                baseline for studying future cognitive decline.
+              </p>
+
+            </div>
+
+          </details>
+
+        </article>
+
       </div>
+
     </section>
 
     <section id="teaching">
+
       <div class="container">
+
         <h2>Teaching</h2>
 
         <p>
-          Teaching information will be added here.
+          Business and Production of Beer, Wine, and Spirits,
+          University of California, Berkeley.
         </p>
+
+        <p>
+          Population, Environment, and Development,
+          University of California, Berkeley.
+        </p>
+
+        <p>
+          Case Studies in Economic Development,
+          University of California, Berkeley.
+        </p>
+
       </div>
+
     </section>
+
   </main>
 
   <footer>
@@ -281,5 +574,7 @@
       © 2026 Michelle Layvant
     </div>
   </footer>
+
 </body>
+
 </html>
