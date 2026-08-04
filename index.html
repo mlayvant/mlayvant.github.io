@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Michelle Layvant</title>
+
+  <style>
+    :root {
+      --text: #222222;
+      --muted: #626262;
+      --accent: #7b2638;
+      --background: #ffffff;
+      --border: #dddddd;
+      --max-width: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(90%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .site-name {
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      font-weight: normal;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      align-items: center;
+      gap: 70px;
+      padding: 85px 0 70px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      line-height: 1.25;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(48px, 7vw, 74px);
+    }
+
+    .position {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 20px;
+    }
+
+    .intro-text {
+      max-width: 660px;
+    }
+
+    .photo-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 280px;
+      height: 340px;
+      background: #eeeeee;
+      color: #777777;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+    }
+
+    section {
+      padding: 55px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      margin: 0 0 38px;
+      font-size: 36px;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 23px;
+    }
+
+    .paper {
+      margin-bottom: 42px;
+    }
+
+    .paper:last-child {
+      margin-bottom: 0;
+    }
+
+    .paper p {
+      margin: 6px 0;
+    }
+
+    .coauthors,
+    .paper-status {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    footer {
+      padding: 35px 0 50px;
+      color: var(--muted);
+      font-size: 15px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 760px) {
+      .navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 55px;
+      }
+
+      .photo-placeholder {
+        width: 220px;
+        height: 270px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container navigation">
+      <a class="site-name" href="#">Michelle Layvant</a>
+
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="cv.pdf">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container intro">
+      <div class="intro-text">
+        <h1>Michelle Layvant</h1>
+
+        <p class="position">
+          PhD Candidate in Agricultural and Resource Economics<br>
+          University of California, Berkeley
+        </p>
+
+        <p>
+          I am a development economist studying human capital investment
+          and household financial decisions.
+        </p>
+
+        <p>
+          My research examines how households finance investments in
+          education and health, and the short- and long-run consequences
+          of those investments.
+        </p>
+
+        <p>
+          Email:
+          <a href="mailto:mlayvant@berkeley.edu">
+            mlayvant@berkeley.edu
+          </a>
+        </p>
+      </div>
+
+      <div class="photo-placeholder">
+        ML
+      </div>
+    </div>
+
+    <section id="research">
+      <div class="container">
+        <h2>Research</h2>
+
+        <div class="paper">
+          <h3>
+            School Vouchers as Commitment: Experimental Evidence on
+            School Fees in Uganda
+          </h3>
+
+          <p class="coauthors">
+            With Gonzalo Ferres
+          </p>
+
+          <p class="paper-status">
+            Job Market Paper
+          </p>
+
+          <p>
+            Paper and abstract forthcoming.
+          </p>
+        </div>
+
+        <div class="paper">
+          <h3>Other Research</h3>
+
+          <p>
+            Additional working papers and projects will be added here.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <div class="container">
+        <h2>Teaching</h2>
+
+        <p>
+          Teaching information will be added here.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Michelle Layvant
+    </div>
+  </footer>
+</body>
+</html>
