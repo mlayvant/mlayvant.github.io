@@ -87,9 +87,24 @@
       font-size: 16px;
     }
 
-    .intro {
-      max-width: 760px;
+    .intro-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 70px;
+      align-items: center;
       padding: 80px 0 70px;
+    }
+
+    .intro {
+      max-width: 720px;
+    }
+
+    .profile-photo {
+      display: block;
+      width: 280px;
+      height: auto;
+      object-fit: cover;
+      object-position: center top;
     }
 
     h1,
@@ -243,8 +258,14 @@
         gap: 15px;
       }
 
-      .intro {
+      .intro-wrapper {
+        grid-template-columns: 1fr;
+        gap: 35px;
         padding-top: 55px;
+      }
+
+      .profile-photo {
+        width: 220px;
       }
 
       h1 {
@@ -286,30 +307,40 @@
 
     <div class="container">
 
-      <div class="intro">
+      <div class="intro-wrapper">
 
-        <h1>Michelle Layvant</h1>
+        <div class="intro">
 
-        <p class="position">
-          PhD Candidate in Agricultural and Resource Economics<br>
-          University of California, Berkeley
-        </p>
+          <h1>Michelle Layvant</h1>
 
-        <p>
-          I am a development economist studying human capital
-          investment and household financial decisions. My research
-          examines how households finance investments in education and
-          health, and the short- and long-run consequences of those
-          investments.
-        </p>
+          <p class="position">
+            PhD Candidate in Agricultural and Resource Economics<br>
+            University of California, Berkeley
+          </p>
 
-        <p>
-          <strong>I am on the 2026–2027 job market.</strong>
-        </p>
+          <p>
+            I am a development economist studying human capital
+            investment and household financial decisions. My research
+            examines how households finance investments in education and
+            health, and the short- and long-run consequences of those
+            investments.
+          </p>
 
-        <p>
-          Email: mlayvant[at]berkeley.edu
-        </p>
+          <p>
+            <strong>I am on the 2026–2027 job market.</strong>
+          </p>
+
+          <p>
+            Email: mlayvant[at]berkeley.edu
+          </p>
+
+        </div>
+
+        <img
+          class="profile-photo"
+          src="headshot.png"
+          alt="Michelle Layvant"
+        >
 
       </div>
 
