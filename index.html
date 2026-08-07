@@ -197,6 +197,38 @@
       margin: 14px 0;
     }
 
+    .teaching-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .teaching-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 35px;
+      align-items: start;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .course-title {
+      margin: 0 0 4px;
+      font-size: 21px;
+    }
+
+    .course-institution {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .course-years {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      text-align: right;
+      white-space: nowrap;
+    }
+
     footer {
       padding: 35px 0 50px;
       color: var(--muted);
@@ -217,6 +249,16 @@
 
       h1 {
         font-size: 48px;
+      }
+
+      .teaching-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .course-years {
+        text-align: left;
+        white-space: normal;
       }
     }
   </style>
@@ -255,20 +297,18 @@
 
         <p>
           I am a development economist studying human capital
-          investment and household financial decisions.
+          investment and household financial decisions. My research
+          examines how households finance investments in education and
+          health, and the short- and long-run consequences of those
+          investments.
         </p>
 
         <p>
-          My research examines how households finance investments
-          in education and health, and the short- and long-run
-          consequences of those investments.
+          <strong>I am on the 2026–2027 job market.</strong>
         </p>
 
         <p>
-          Email:
-          <a href="mailto:mlayvant@berkeley.edu">
-            mlayvant@berkeley.edu
-          </a>
+          Email: mlayvant[at]berkeley.edu
         </p>
 
       </div>
@@ -294,6 +334,10 @@
 
           <p class="coauthors">
             With Gonzalo Ferres
+          </p>
+
+          <p class="paper-status">
+            Coming soon!
           </p>
 
         </article>
@@ -548,20 +592,51 @@
 
         <h2>Teaching</h2>
 
-        <p>
-          Business and Production of Beer, Wine, and Spirits,
-          University of California, Berkeley.
-        </p>
+        <div class="teaching-list">
 
-        <p>
-          Population, Environment, and Development,
-          University of California, Berkeley.
-        </p>
+          <div class="teaching-item">
+            <div>
+              <h3 class="course-title">
+                Business and Production of Beer, Wine, and Spirits
+              </h3>
+              <p class="course-institution">
+                University of California, Berkeley
+              </p>
+            </div>
+            <p class="course-years">
+              2021, 2022, 2023, 2025, 2026
+            </p>
+          </div>
 
-        <p>
-          Case Studies in Economic Development,
-          University of California, Berkeley.
-        </p>
+          <div class="teaching-item">
+            <div>
+              <h3 class="course-title">
+                Population, Environment, and Development
+              </h3>
+              <p class="course-institution">
+                University of California, Berkeley
+              </p>
+            </div>
+            <p class="course-years">
+              2024
+            </p>
+          </div>
+
+          <div class="teaching-item">
+            <div>
+              <h3 class="course-title">
+                Case Studies in Economic Development
+              </h3>
+              <p class="course-institution">
+                University of California, Berkeley
+              </p>
+            </div>
+            <p class="course-years">
+              2023
+            </p>
+          </div>
+
+        </div>
 
       </div>
 
