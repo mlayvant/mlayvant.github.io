@@ -1,19 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>Latest Job Market Paper – Michelle Layvant</title>
+  <meta charset="UTF-8">
+  <title>Latest Job Market Paper</title>
   <script>
-    // Make each visit request a fresh PDF, instead of a locally cached copy.
-    const pdf = new URL('jmp.pdf', window.location.href);
-    pdf.searchParams.set('v', Date.now().toString());
-    window.location.replace(pdf.toString());
+    window.location.replace(
+      "https://michellelayvant.com/jmp.pdf?v=" + Date.now()
+    );
   </script>
 </head>
 <body>
-  <p>Opening the latest version of the job market paper…
-    <a href="jmp.pdf">Open the PDF directly</a>.</p>
+  <p>Opening the latest version of the paper...</p>
+  <p>
+    <a href="https://michellelayvant.com/jmp.pdf">
+      Click here if the PDF does not open.
+    </a>
+  </p>
 </body>
 </html>
