@@ -22,42 +22,33 @@
       --accent: #7b2638;
       --background: #ffffff;
       --border: #dddddd;
+      --subtle-border: #eeeeee;
       --max-width: 1040px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       background: var(--background);
       color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     .container {
       width: min(90%, var(--max-width));
       margin: 0 auto;
     }
 
+    /* Keep the same simple header, with less empty space. */
     header {
-      padding: 30px 0;
+      padding: 19px 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -65,222 +56,176 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 24px;
     }
 
     .site-name {
       color: var(--text);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
+      font-size: 25px;
       font-weight: normal;
     }
 
-    nav {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
+    nav { display: flex; flex-wrap: wrap; gap: 23px; }
+    nav a { color: var(--text); font-size: 15px; }
 
-    nav a {
-      color: var(--text);
-      font-size: 16px;
-    }
-
+    /* A shorter introduction gets readers to the research sooner. */
     .intro-wrapper {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 340px;
-      gap: 70px;
+      grid-template-columns: minmax(0, 1fr) 275px;
+      gap: 52px;
       align-items: center;
-      padding: 80px 0 70px;
+      padding: 42px 0 43px;
     }
 
-    .intro {
-      max-width: 720px;
-    }
+    .intro { max-width: 720px; }
+    .intro p { margin: 0 0 12px; }
+    .intro p:last-child { margin-bottom: 0; }
 
     .profile-photo {
       display: block;
-      width: 340px;
+      width: 275px;
       height: auto;
       object-fit: cover;
       object-position: center top;
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-weight: normal;
-      line-height: 1.25;
+      line-height: 1.28;
     }
 
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(48px, 7vw, 74px);
-    }
-
-    h2 {
-      margin: 0 0 38px;
-      font-size: 36px;
-    }
-
-    h3 {
-      margin: 0 0 8px;
-      font-size: 23px;
-    }
+    h1 { margin: 0 0 8px; font-size: clamp(43px, 5vw, 60px); }
+    h2 { margin: 0 0 22px; font-size: 30px; }
+    h3 { margin: 0; }
 
     .position {
-      margin: 0 0 28px;
+      margin: 0 0 15px !important;
       color: var(--muted);
-      font-size: 20px;
-      line-height: 1.5;
+      font-size: 18px;
+      line-height: 1.4;
     }
 
     section {
-      padding: 55px 0;
+      padding: 37px 0 39px;
       border-top: 1px solid var(--border);
     }
 
+    /* Research: compact bibliography-style entries, not separate cards. */
     .research-category {
-      margin: 50px 0 28px;
-      padding-bottom: 10px;
+      margin: 27px 0 12px;
+      padding-bottom: 8px;
       border-bottom: 1px solid var(--border);
-      font-size: 26px;
+      font-size: 20px;
     }
 
-    .research-category:first-of-type {
-      margin-top: 0;
-    }
+    .research-category:first-of-type { margin-top: 0; }
 
     .paper {
-      margin-bottom: 48px;
+      margin: 0;
+      padding: 9px 0 14px;
+      border-bottom: 1px solid var(--subtle-border);
     }
 
-    .paper:last-child {
-      margin-bottom: 0;
-    }
+    .paper:has(+ .research-category),
+    .paper:last-child { border-bottom: 0; padding-bottom: 2px; }
 
     .paper-title {
-      margin-bottom: 8px;
+      margin: 0 0 3px;
+      font-size: 19px;
+      line-height: 1.34;
     }
 
-    .paper p {
-      margin: 7px 0;
-    }
-
-    .coauthors {
+    .paper p.coauthors, .paper p.paper-status {
+      margin: 2px 0;
       color: var(--muted);
-      font-size: 16px;
-      line-height: 1.55;
+      font-size: 14px;
+      line-height: 1.42;
     }
 
-    .paper-status {
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .paper-links {
-      display: flex;
+    /* Links and abstract toggle share a single line where space permits. */
+    .paper .paper-links {
+      display: inline-flex;
       flex-wrap: wrap;
-      gap: 10px 22px;
-      margin: 11px 0;
-      font-size: 16px;
+      gap: 5px 17px;
+      margin: 5px 16px 0 0;
+      font-size: 14px;
+      line-height: 1.4;
+      vertical-align: baseline;
     }
 
     .abstract {
-      margin-top: 14px;
+      display: inline-block;
+      margin: 5px 0 0;
+      vertical-align: baseline;
     }
 
     .abstract summary {
+      display: list-item;
       color: var(--accent);
       cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: normal;
+      list-style: none;
     }
 
-    .abstract summary:hover {
-      text-decoration: underline;
-    }
+    .abstract summary::-webkit-details-marker { display: none; }
+    .abstract summary::after { content: " +"; }
+    .abstract[open] summary::after { content: " −"; }
+    .abstract summary:hover { text-decoration: underline; }
 
-    .abstract > p,
-    .structured-abstract {
-      max-width: 880px;
-      margin-top: 15px;
+    /* Open abstracts take the full line instead of squeezing beside links. */
+    .abstract[open] { display: block; margin-top: 10px; }
+    .abstract > p, .structured-abstract {
+      max-width: 900px;
+      margin: 9px 0 0;
+      font-size: 15px;
+      line-height: 1.52;
     }
+    .structured-abstract p { margin: 9px 0; }
 
-    .structured-abstract p {
-      margin: 14px 0;
-    }
-
-    .teaching-list {
-      border-top: 1px solid var(--border);
-    }
-
+    /* Teaching uses the same tighter rhythm. */
+    .teaching-list { border-top: 1px solid var(--border); }
     .teaching-item {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
-      gap: 35px;
       align-items: start;
-      padding: 24px 0;
+      gap: 24px;
+      padding: 12px 0;
       border-bottom: 1px solid var(--border);
     }
-
-    .course-title {
-      margin: 0 0 4px;
-      font-size: 21px;
-    }
-
-    .course-institution {
+    .course-title { margin: 0 0 2px; font-size: 18px; }
+    .course-institution, .course-years {
       margin: 0;
       color: var(--muted);
-      font-size: 16px;
+      font-size: 14px;
     }
-
-    .course-years {
-      margin: 2px 0 0;
-      color: var(--muted);
-      font-size: 16px;
-      text-align: right;
-      white-space: nowrap;
-    }
+    .course-years { text-align: right; white-space: nowrap; }
 
     footer {
-      padding: 35px 0 50px;
+      padding: 21px 0 26px;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14px;
       border-top: 1px solid var(--border);
     }
 
     @media (max-width: 760px) {
-      .navigation {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 15px;
-      }
-
+      .navigation { align-items: flex-start; flex-direction: column; gap: 11px; }
       .intro-wrapper {
         grid-template-columns: 1fr;
-        gap: 35px;
-        padding-top: 55px;
+        gap: 22px;
+        padding: 28px 0 32px;
       }
-
-      .profile-photo {
-        width: 260px;
-      }
-
-      h1 {
-        font-size: 48px;
-      }
-
-      .teaching-item {
-        grid-template-columns: 1fr;
-        gap: 6px;
-      }
-
-      .course-years {
-        text-align: left;
-        white-space: normal;
-      }
+      .profile-photo { width: min(260px, 100%); }
+      h1 { font-size: 43px; }
+      section { padding: 30px 0; }
+      h2 { font-size: 28px; }
+      .research-category { margin-top: 25px; font-size: 19px; }
+      .paper-title { font-size: 18px; }
+      .teaching-item { grid-template-columns: 1fr; gap: 3px; }
+      .course-years { text-align: left; white-space: normal; }
     }
   </style>
 </head>
@@ -367,6 +312,10 @@
             With Gonzalo Ferres
           </p>
 
+          <p class="paper-links">
+            <a href="latest.html" target="_blank" rel="noopener noreferrer">Paper</a>
+          </p>
+
           <details class="abstract">
             <summary>Abstract</summary>
             <p>
@@ -434,14 +383,14 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Forthcoming Article (AEJ: Applied Economics)
+              AEJ article
             </a>
             <a
               href="https://www.nber.org/papers/w31162"
               target="_blank"
               rel="noopener noreferrer"
             >
-              NBER Working Paper
+              NBER paper
             </a>
           </p>
 
@@ -491,14 +440,14 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Published Article
+              Article
             </a>
             <a
               href="https://voxdev.org/topic/health/air-pollution-clouds-mind-evidence-real-time-monitoring-kenya"
               target="_blank"
               rel="noopener noreferrer"
             >
-              VoxDev Article
+              VoxDev
             </a>
           </p>
 
@@ -563,7 +512,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Published Article
+              Article
             </a>
           </p>
 
