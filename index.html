@@ -144,25 +144,34 @@
       line-height: 1.42;
     }
 
-    /* Links and abstract toggle share a single line where space permits. */
+    /* Consistent action row: Abstract always starts at the left;
+       article links sit beside it even when the abstract is open. */
+    .paper-actions {
+      position: relative;
+      margin-top: 5px;
+      min-height: 20px;
+    }
+
     .paper .paper-links {
-      display: inline-flex;
+      position: absolute;
+      top: 0;
+      left: 108px;
+      display: flex;
       flex-wrap: wrap;
       gap: 5px 17px;
-      margin: 5px 16px 0 0;
+      margin: 0;
       font-size: 14px;
       line-height: 1.4;
-      vertical-align: baseline;
     }
 
     .abstract {
-      display: inline-block;
-      margin: 5px 0 0;
-      vertical-align: baseline;
+      display: block;
+      margin: 0;
     }
 
     .abstract summary {
       display: list-item;
+      width: max-content;
       color: var(--accent);
       cursor: pointer;
       font-size: 14px;
@@ -176,8 +185,6 @@
     .abstract[open] summary::after { content: " −"; }
     .abstract summary:hover { text-decoration: underline; }
 
-    /* Open abstracts take the full line instead of squeezing beside links. */
-    .abstract[open] { display: block; margin-top: 10px; }
     .abstract > p, .structured-abstract {
       max-width: 900px;
       margin: 9px 0 0;
@@ -311,17 +318,18 @@
           <p class="coauthors">
             With Gonzalo Ferres
           </p>
+          <div class="paper-actions">
 
           <p class="paper-links">
             <a href="latest.html" target="_blank" rel="noopener noreferrer">Paper</a>
           </p>
-
           <details class="abstract">
             <summary>Abstract</summary>
             <p>
               Primary-school dropout remains widespread in Sub-Saharan Africa, and school fees are a major barrier to completion. In an experiment with 2,000 parents in eastern Uganda, we study whether time-inconsistent preferences help explain why fees go unpaid. We elicit parents’ willingness to pay for two restrictions on a cash transfer, delaying it until fees are due and, holding timing fixed, earmarking it as a voucher paid directly to the school. Demand for both restrictions is substantial: 69 percent of parents are willing to pay for earmarking and 62 percent for delay. We then randomly assign parents to receive the same amount as cash six weeks before fees are due, as cash when fees are due, as a voucher, or no transfer. Cash raises fee payment only modestly, whether it arrives early or when fees are due. The voucher more than doubles fees paid and cuts within-term dropout by more than half. Fee-day cash and the voucher also raise school attendance. Parents who are willing to pay more for the voucher expect it to increase fee payment more, yet its effects on fee payment and attendance are larger among those who prefer cash. One reason is that parents substantially underestimate the voucher’s effect on their own fee payment. In a model of quasi-hyperbolic discounting, these findings are consistent with partial naïveté, in which parents anticipate their own time inconsistency but underestimate its severity.
             </p>
           </details>
+          </div>
 
         </article>
 
@@ -342,13 +350,14 @@
           <p class="paper-status">
             Working paper available upon request.
           </p>
-
+          <div class="paper-actions">
           <details class="abstract">
             <summary>Abstract</summary>
             <p>
               We study the long-run effects of access to secondary school in Kenya, where admission depended on a cutoff score on a national exam at the end of primary school. Using a regression discontinuity design and a panel that follows students for nearly two decades after the exam, we estimate effects on fertility, cognition, and economic outcomes. Scoring above the cutoff raises secondary school completion by 17 percentage points, with larger increases for women. We find large and persistent declines in realized fertility among men, of about one child on average, but, perhaps surprisingly, no detectable fertility effects among women. These fertility changes are not accompanied by changes in the probability of marriage. We also document durable improvements in adult cognitive performance, with gains of roughly 0.2–0.3 standard deviations. These benefits appear to extend across generations: the children of female respondents who scored above the cutoff perform better on tests of academic skills, while the children of male respondents do not. In contrast, we find limited evidence of long-run gains in earnings or household consumption.
             </p>
           </details>
+          </div>
 
         </article>
 
@@ -376,6 +385,7 @@
             <em>American Economic Journal: Applied Economics</em>,
             forthcoming.
           </p>
+          <div class="paper-actions">
 
           <p class="paper-links">
             <a
@@ -393,7 +403,6 @@
               NBER paper
             </a>
           </p>
-
           <details class="abstract">
 
             <summary>Abstract</summary>
@@ -415,6 +424,7 @@
             </p>
 
           </details>
+          </div>
 
         </article>
 
@@ -433,6 +443,7 @@
           <p class="paper-status">
             <em>Journal of Health Economics</em> 109, 103166, 2026.
           </p>
+          <div class="paper-actions">
 
           <p class="paper-links">
             <a
@@ -450,7 +461,6 @@
               VoxDev
             </a>
           </p>
-
           <details class="abstract">
 
             <summary>Abstract</summary>
@@ -484,6 +494,7 @@
             </p>
 
           </details>
+          </div>
 
         </article>
 
@@ -505,6 +516,7 @@
           <p class="paper-status">
             <em>BMJ Open</em> 15(8), 2025.
           </p>
+          <div class="paper-actions">
 
           <p class="paper-links">
             <a
@@ -515,7 +527,6 @@
               Article
             </a>
           </p>
-
           <details class="abstract">
 
             <summary>Abstract</summary>
@@ -603,6 +614,7 @@
             </div>
 
           </details>
+          </div>
 
         </article>
 
