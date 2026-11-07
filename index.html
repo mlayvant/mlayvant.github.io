@@ -112,29 +112,50 @@
       border-top: 1px solid var(--border);
     }
 
-    /* Research: compact bibliography-style entries, not separate cards. */
+    /* Research: understated section bands and easy-to-scan paper entries. */
+    #research h2 { margin-bottom: 24px; }
+
     .research-category {
-      margin: 27px 0 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-      font-size: 20px;
+      margin: 30px 0 0;
+      padding: 11px 16px;
+      background: #f1f2f3;
+      border: 1px solid #e4e5e6;
+      border-left: 4px solid #b6b9bd;
+      border-radius: 4px 4px 0 0;
+      color: #393939;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.3;
     }
 
     .research-category:first-of-type { margin-top: 0; }
 
+    /* Give the job market paper a discreet accent, not a bright card. */
+    .research-category.category-job-market {
+      background: #f0edf0;
+      border-left-color: var(--accent);
+    }
+
     .paper {
       margin: 0;
-      padding: 9px 0 14px;
-      border-bottom: 1px solid var(--subtle-border);
+      padding: 18px 19px 19px;
+      background: #ffffff;
+      border: 1px solid #e4e5e6;
+      border-top: 0;
     }
 
     .paper:has(+ .research-category),
-    .paper:last-child { border-bottom: 0; padding-bottom: 2px; }
+    .paper:last-child { border-radius: 0 0 4px 4px; }
+
+    .paper + .paper { border-top: 1px solid #ececec; }
+
+    .category-job-market + .paper { background: #fbfafb; }
+    .category-working-papers + .paper { background: #fafafa; }
 
     .paper-title {
-      margin: 0 0 3px;
+      margin: 0 0 5px;
       font-size: 19px;
-      line-height: 1.34;
+      line-height: 1.38;
     }
 
     .paper p.coauthors, .paper p.paper-status {
@@ -229,7 +250,8 @@
       h1 { font-size: 43px; }
       section { padding: 30px 0; }
       h2 { font-size: 28px; }
-      .research-category { margin-top: 25px; font-size: 19px; }
+      .research-category { margin-top: 25px; padding: 10px 13px; font-size: 17px; }
+      .paper { padding: 15px 14px 17px; }
       .paper-title { font-size: 18px; }
       .teaching-item { grid-template-columns: 1fr; gap: 3px; }
       .course-years { text-align: left; white-space: normal; }
@@ -304,7 +326,7 @@
 
         <h2>Research</h2>
 
-        <h3 class="research-category">
+        <h3 class="research-category category-job-market">
           Job Market Paper
         </h3>
 
@@ -333,7 +355,7 @@
 
         </article>
 
-        <h3 class="research-category">
+        <h3 class="research-category category-working-papers">
           Working Papers
         </h3>
 
